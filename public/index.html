@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
+    <title>Lab 9</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <link rel="shortcut icon" href="#" />
+  </head>
+
+  <body>
+
+    <div class="jumbotron">
+        <h1 class="display-4">Laboratory #9</h1>
+        <p class="lead">by: Andrés Villanueva</p>
+    </div>
+
+    <div class="card">
+        <div class="card-header">
+            List all the bookmarks when the page loads.
+        </div>
+        <div class="card-body">
+        <form class="allBookmarks-form">
+            <button type="submit" id="submitBtn-AllBookmarks" class="btn btn-primary">All Bookmarks</button>    
+        </form>
+        <br>
+        <section class="resultsAllBookmarks">
+
+        </section>
+
+        </div>
+    </div>
+    <br>
+    <div class="card">
+        <div class="card-header">
+            Have a form to POST a new bookmark and update the list on the success.
+        </div>
+        <div class="card-body">
+
+            <form class="postBookmark-form">
+                <div class="form-group">
+                    <label for="titlePost">Title</label>
+                    <input type="text" class="form-control" id="titlePOST">
+                 </div>
+                <div class="form-group">
+                    <label for="exampleFormControlTextarea1">Description</label>
+                    <textarea class="form-control" id="descriptionPOST" rows="3"></textarea>
+                </div>
+                <div class="form-group">
+                    <label for="ratingPOST">Rating</label>
+                    <input type="number" class="form-control" id="ratingPOST">
+                 </div>
+
+                 <div class="form-group">
+                    <label for="urlPOST">URL</label>
+                    <input type="text" class="form-control" id="urlPOST">
+                 </div>
+                 <div id="validationFormPOST">
+
+                 </div>
+                <button type="submit" id="submitBtn-AllBookmarks" class="btn btn-primary">Create Bookmark</button>    
+            </form>
+            <br>
+            <section class="resultsPostBookmark">
+    
+            </section>
+          
+        </div>
+    </div>
+
+    <br>
+    <div class="card">
+        <div class="card-header">
+            Have a form to DELETE a bookmark and update the list on the success.
+        </div>
+        <div class="card-body">
+
+            <form class="deleteBookmark-form">
+                <div class="form-group">
+                    
+                    <label for="idDELETE">ID </label>
+                    <input type="text" class="form-control" id="idDELETE">
+                    <br>
+                    <div id="validationFormDELETE">
+
+                    </div>
+                    <button type="submit" id="submitBtn-AllBookmarks" class="btn btn-primary">Delete Bookmark</button>    
+                 </div>
+
+                 <section class="resultsDeleteBookmark">
+    
+                </section>
+
+            </form>
+          
+        </div>
+    </div>
+
+    <br>
+    <div class="card">
+        <div class="card-header">
+            Have a form for UPDATING a bookmark and modify the list on the success.
+        </div>
+        <div class="card-body">
+
+            <form class="updateBookmark-form">
+                <div class="form-group">
+                    <label for="idUPDATE">ID</label>
+                    <input type="text" class="form-control" id="idUPDATE">
+                 </div>
+                <div class="form-group">
+                    <label for="titleUPDATE">Title</label>
+                    <input type="text" class="form-control" id="titleUPDATE">
+                 </div>
+                <div class="form-group">
+                    <label for="descriptionUPDATE">Description</label>
+                    <textarea class="form-control" id="descriptionUPDATE" rows="3"></textarea>
+                </div>
+                <div class="form-group">
+                    <label for="ratingUPDATE">Rating</label>
+                    <input type="number" class="form-control" id="ratingUPDATE">
+                 </div>
+
+                 <div class="form-group">
+                    <label for="urlUPDATE">URL</label>
+                    <input type="text" class="form-control" id="urlUPDATE">
+                 </div>
+                 <div id="validationFormUPDATE">
+
+                 </div>
+                <button type="submit" id="submitBtn-AllBookmarks" class="btn btn-primary">Update Bookmark</button>    
+            </form>
+            <br>
+            <section class="resultsUpdateBookmark">
+    
+            </section>
+          
+        </div>
+    </div>
+
+    <br>
+    <div class="card">
+        <div class="card-header">
+            Have a form to GET bookmarks by title and display the results.
+        </div>
+        <div class="card-body">
+
+            <form class="getBookmarkbyTitle-form">
+                <div class="form-group">
+                    <label for="titleGET">Title</label>
+                    <input type="text" class="form-control" id="titleGET">
+                 <br>
+                    <div id="validationFormGetByTitle">
+
+                    </div>
+                    <button type="submit" id="submitBtn-AllBookmarks" class="btn btn-primary">Get Bookmark by Title</button>    
+                </div>
+                <br>
+             <section class="resultsGetBookmarkByTitle">
+    
+            </section>
+            </form>
+          
+        </div>
+    </div>
+
+    
+    <script src="./js/index.js"></script>
+    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+
+  </body>
+</html>
